@@ -1,0 +1,38 @@
+{
+  "name": "font-awesome-icons",
+  "version": "0.0.0",
+  "description": "Returns actual list of Font Awesome icons",
+  "license": "MIT",
+  "repository": "soul-wish/font-awesome-icons",
+  "author": {
+    "name": "Sergey Lysenko",
+    "email": "soulwish.ls@gmail.com",
+    "url": "soulwish.info"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "json",
+    "font-awesome",
+    "list",
+    "icons",
+    "fonts"
+  ],
+  "dependencies": {
+    "got": "^6.6.3",
+    "yamljs": "^0.2.8"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
+  }
+}

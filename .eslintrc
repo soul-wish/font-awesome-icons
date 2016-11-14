@@ -1,0 +1,15 @@
+{
+    'extends': 'airbnb-base',
+    'env': {
+        'node': true,
+        'browser': true
+    },
+    globals: {
+    },
+    'rules': {
+        'indent': [2, 4],
+        'no-param-reassign': [2, { props: false }],
+        'no-console': ["error", { allow: ['log', 'error', 'warn'] }],
+        'max-len': 0
+    }
+}
