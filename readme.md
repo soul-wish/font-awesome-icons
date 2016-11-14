@@ -30,6 +30,20 @@ faIcons.getList().then(icons => console.log(icons[0]));
 */
 ```
 
+### API
+
+### .getList()
+
+Type: `function`
+
+Returns a promise with a full list of actual Font Awesome icons
+
+### .version()
+
+Type: `function`
+
+Returns a promise with an actual version of Font Awesome.
+
 ## License
 
 MIT © [Sergey Lysenko](http://soulwish.info)
