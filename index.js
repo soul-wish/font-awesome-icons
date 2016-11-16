@@ -33,6 +33,9 @@ const getCategoriesArray = (data) => {
     return categoriesArray;
 };
 
+const getIconsByCategoryName = (data, name) =>
+    getCategoriesObject(data)[name] || [];
+
 module.exports.getList = getIcons;
 
 module.exports.version = () =>
@@ -47,4 +50,14 @@ module.exports.getCategories = () =>
         getIcons()
             .then(data => resolve(getCategoriesArray(data)))
             .catch(() => resolve(getCategoriesArray(backupList.icons)));
+    });
+
+module.exports.getIconsByCategory = categoryName =>
+    new Promise((resolve) => {
+        if (!categoryName) {
+            return resolve([]);
+        }
+        return getIcons()
+            .then(data => resolve(getIconsByCategoryName(data, categoryName)))
+            .catch(() => resolve(getIconsByCategoryName(backupList.icons, categoryName)));
     });
