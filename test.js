@@ -16,3 +16,13 @@ test('Check the version of FA', async (t) => {
     const faVersion = await icons.version();
     t.is(faVersion, '4.7.x');
 });
+
+test('Check amount of categories', async (t) => {
+    const faCategories = await icons.getCategories();
+    t.is(faCategories.length, 16);
+});
+
+test('Check that first category is called "Web Application Icons"', async (t) => {
+    const faCategories = await icons.getCategories();
+    t.is(faCategories[0].name, 'Web Application Icons');
+});
