@@ -70,6 +70,13 @@ Returns a promise with a categories array.
 ]
 ```
 
+### .getIconsByCategory(categoryName)
+
+Type: `function`
+
+Returns a promise with array of icons in needed category.
+
+
 ## License
 
 MIT © [Sergey Lysenko](http://soulwish.info)
