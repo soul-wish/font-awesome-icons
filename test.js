@@ -26,3 +26,13 @@ test('Check that first category is called "Web Application Icons"', async (t) =>
     const faCategories = await icons.getCategories();
     t.is(faCategories[0].name, 'Web Application Icons');
 });
+
+test('Check amount of icons in "Web Application Icons" category', async (t) => {
+    const faCategory = await icons.getIconsByCategory('Web Application Icons');
+    t.is(faCategory.length, 374);
+});
+
+test('Non-existing category name should return empty erray', async (t) => {
+    const faCategory = await icons.getIconsByCategory('Hello FA');
+    t.is(faCategory.length, 0);
+});
