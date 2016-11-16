@@ -36,13 +36,39 @@ faIcons.getList().then(icons => console.log(icons[0]));
 
 Type: `function`
 
-Returns a promise with a full list of actual Font Awesome icons
+Returns a promise with a full list of actual Font Awesome icons.
 
 ### .version()
 
 Type: `function`
 
 Returns a promise with an actual version of Font Awesome.
+
+### .getCategories()
+
+Type: `function`
+
+Returns a promise with a categories array.
+
+```js
+[
+    {
+        name: 'Web Application Icons',
+        icons: [
+            {
+                name: 'Glass',
+                id: 'glass',
+                unicode: 'f000',
+                created: 1,
+                filter: [ 'martini', 'drink', 'bar', 'alcohol', 'liquor' ],
+                categories: [ 'Web Application Icons' ]
+            },
+            ...
+        ]
+    },
+    ...
+]
+```
 
 ## License
 
