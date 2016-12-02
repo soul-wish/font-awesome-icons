@@ -36,3 +36,8 @@ test('Non-existing category name should return empty erray', async (t) => {
     const faCategory = await icons.getIconsByCategory('Hello FA');
     t.is(faCategory.length, 0);
 });
+
+test('getListByKeys should return simplified objects', async (t) => {
+    const faIcons = await icons.getListByKeys(['name', 'unicode']);
+    t.deepEqual(faIcons[0], { name: 'Glass', unicode: 'f000' });
+});

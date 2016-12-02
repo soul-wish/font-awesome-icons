@@ -1,5 +1,6 @@
 const got = require('got');
 const YAML = require('yamljs');
+const oPick = require('object.pick');
 const backupList = require('./data/icons.json');
 
 const getIcons = () => got('fontawesome.io/icons.yml')
@@ -36,6 +37,10 @@ const getCategoriesArray = (data) => {
 const getIconsByCategoryName = (data, name) =>
     getCategoriesObject(data)[name] || [];
 
+const cleanUpObject = (data, fields) => {
+    return data.map(icon => oPick(icon, fields));
+};
+
 module.exports.getList = getIcons;
 
 module.exports.version = () =>
@@ -60,4 +65,11 @@ module.exports.getIconsByCategory = categoryName =>
         return getIcons()
             .then(data => resolve(getIconsByCategoryName(data, categoryName)))
             .catch(() => resolve(getIconsByCategoryName(backupList.icons, categoryName)));
+    });
+
+module.exports.getListByKeys = (fields = []) =>
+    new Promise((resolve) => {
+        getIcons()
+            .then(data => resolve(cleanUpObject(data, fields)))
+            .catch(() => resolve(cleanUpObject(backupList.icons, fields)));
     });

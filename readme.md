@@ -76,6 +76,19 @@ Type: `function`
 
 Returns a promise with array of icons in needed category.
 
+### .getListByKeys(arrayOfNeededKeys)
+
+Type: `function`
+
+Returns a promise with a full list of Font Awesome icons with needed keys only.
+
+```js
+const faIcons = require('font-awesome-icons');
+
+faIcons.getListByKeys(['name', 'unicode']).then(icons => console.log(icons[0]));
+//=> { name: 'Glass', unicode: 'f000' }
+```
+
 
 ## License
 
