@@ -67,7 +67,7 @@ module.exports.getIconsByCategory = categoryName =>
             .catch(() => resolve(getIconsByCategoryName(backupList.icons, categoryName)));
     });
 
-module.exports.getListByKeys = (fields = []) =>
+module.exports.getListByKeys = fields =>
     new Promise((resolve) => {
         getIcons()
             .then(data => resolve(cleanUpObject(data, fields)))
