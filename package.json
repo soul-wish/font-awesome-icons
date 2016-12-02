@@ -28,10 +28,11 @@
   ],
   "dependencies": {
     "got": "^6.6.3",
+    "object.pick": "^1.2.0",
     "yamljs": "^0.2.8"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.17.0",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*"
