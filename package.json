@@ -27,14 +27,14 @@
     "fonts"
   ],
   "dependencies": {
-    "got": "^6.6.3",
+    "got": "^6.7.1",
     "object.pick": "^1.2.0",
     "yamljs": "^0.2.8"
   },
   "devDependencies": {
     "ava": "^0.17.0",
-    "eslint": "*",
-    "eslint-config-airbnb-base": "*",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "*"
   }
 }
