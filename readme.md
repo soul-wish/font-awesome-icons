@@ -89,6 +89,10 @@ faIcons.getListByKeys(['name', 'unicode']).then(icons => console.log(icons[0]));
 //=> { name: 'Glass', unicode: 'f000' }
 ```
 
+## Related
+
+[font-awesome-v5-icons](https://github.com/soul-wish/font-awesome-v5-icons) – separate package for Font Awesome v5
+
 
 ## License
 
