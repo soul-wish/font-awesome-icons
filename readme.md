@@ -44,9 +44,11 @@ Type: `function`
 
 Returns a promise with an actual version of Font Awesome.
 
-### .getCategories()
+### .getCategories(arrayOfNeededKeys)
 
 Type: `function`
+
+arrayOfNeededKeys - optional parameter with array of needed keys for icons (eg: `['name', 'unicode']`)
 
 Returns a promise with a categories array.
 

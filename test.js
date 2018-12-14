@@ -41,3 +41,8 @@ test('getListByKeys should return simplified objects', async (t) => {
     const faIcons = await icons.getListByKeys(['name', 'unicode']);
     t.deepEqual(faIcons[0], { name: 'Glass', unicode: 'f000' });
 });
+
+test('getCategories should be able to return simplified icon objects', async (t) => {
+    const faCategories = await icons.getCategories(['name', 'unicode']);
+    t.deepEqual(faCategories[0].icons[0], { name: 'Glass', unicode: 'f000' });
+});
