@@ -27,7 +27,7 @@
     "fonts"
   ],
   "dependencies": {
-    "got": "^9.6.0",
+    "got": "^11.8.5",
     "object.pick": "^1.2.0",
     "yamljs": "^0.3.0"
   },
